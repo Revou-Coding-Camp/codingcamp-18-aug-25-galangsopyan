@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+  <!-- CSS utama -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+
+    <!-- ================= FORM INPUT TASK ================= -->
+    <form id="todo-form">
+      <!-- Input nama task -->
+      <input type="text" id="todo-input" placeholder="Enter a task..." />
+
+      <!-- Input tanggal -->
+      <input type="date" id="date-input" />
+
+      <!-- Pilihan status awal -->
+      <select id="status-input">
+        <option value="pending">Pending</option>
+        <option value="in-progress">In Progress</option>
+        <option value="done">Done</option>
+      </select>
+
+      <!-- Tombol tambah task -->
+      <button type="submit" id="add-task">Add Task</button>
+    </form>
+
+    <!-- ================= FILTER & SEARCH ================= -->
+    <div class="controls">
+      <!-- Search task -->
+      <input type="text" id="search-input" placeholder="🔍 Search task..." />
+
+      <!-- Filter berdasarkan status -->
+      <select id="filter-status">
+        <option value="all">All</option>
+        <option value="pending">Pending</option>
+        <option value="in-progress">In Progress</option>
+        <option value="done">Done</option>
+      </select>
+
+      <!-- Filter berdasarkan tanggal -->
+      <input type="date" id="filter-date" />
+
+      <!-- Tombol reset filter -->
+      <button id="clear-filter" type="button">Clear</button>
+
+      <!-- Tombol hapus semua task -->
+      <button id="delete-all" class="delete-all" type="button">Delete All</button>
+    </div>
+
+    <!-- ================= LIST TASK ================= -->
+    <ul id="todo-list"></ul>
+  </div>
+
+  <!-- Script utama -->
+  <script src="script.js"></script>
+</body>
+</html>
